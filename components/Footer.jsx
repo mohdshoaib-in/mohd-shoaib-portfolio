@@ -71,10 +71,6 @@ export default function Footer() {
           <p>
             © {new Date().getFullYear()} Mohd Shoaib. All rights reserved.
           </p>
-
-          <p>
-            Built with React.js · Next.js · Tailwind CSS
-          </p>
         </div>
       </div>
     </footer>

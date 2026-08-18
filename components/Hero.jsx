@@ -249,7 +249,7 @@ export default function Hero() {
                 {/* Photo */}
                 <div className="relative aspect-[4/5] overflow-hidden rounded-[1.6rem] bg-zinc-900">
                   <img
-                    src="/image.jpeg"
+                    src="/image.jpg"
                     alt="Mohd Shoaib — Full Stack Software Engineer"
                     className="h-full w-full object-cover object-center grayscale-[15%] transition duration-700 ease-out group-hover:scale-[1.025] group-hover:grayscale-0"
                   />
