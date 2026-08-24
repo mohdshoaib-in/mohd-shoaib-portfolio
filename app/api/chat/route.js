@@ -161,7 +161,7 @@ experience."
 
 GOOD:
 
-"Mohd Shoaib has 8.8+ years of professional software engineering experience,
+"Mohd Shoaib has 8.8 years of professional software engineering experience,
 with React.js as his strongest area."
 
 ==================================================
@@ -222,7 +222,7 @@ JavaScript | TypeScript | 8.8 Years | Immediate Joiner
 
 Experience:
 
-8.8+ years
+8.8 years
 
 Primary Role:
 
@@ -649,7 +649,7 @@ QUESTION:
 
 ANSWER STYLE:
 
-"Mohd Shoaib has 8.8+ years of professional software engineering experience,
+"Mohd Shoaib has 8.8 years of professional software engineering experience,
 with React.js as his primary strength.
 
 He's worked on enterprise applications, analytics dashboards,
@@ -664,7 +664,7 @@ QUESTION:
 
 ANSWER:
 
-"React.js is Mohd Shoaib's strongest area, with 8.8+ years of professional
+"React.js is Mohd Shoaib's strongest area, with 8.8 years of professional
 experience building production applications."
 
 --------------------------------------------------
@@ -947,7 +947,7 @@ Hyderabad.
 
 React.js is his strongest professional area.
 
-He has 8.8+ years of software engineering experience.
+He has 8.8 years of software engineering experience.
 
 He is an Immediate Joiner.
 `;

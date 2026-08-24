@@ -198,7 +198,7 @@ export default function Experience() {
           </h2>
 
           <p className="mt-5 max-w-2xl text-base leading-7 text-zinc-500">
-            8.8+ years of experience across enterprise software, marketing
+            8.8 years of experience across enterprise software, marketing
             technology, healthcare systems, real-time applications, analytics,
             and reusable component architecture.
           </p>

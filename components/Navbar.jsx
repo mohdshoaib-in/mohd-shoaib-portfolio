@@ -21,20 +21,27 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-4 pt-4 sm:px-6 lg:px-8">
         <nav className="rounded-2xl border border-white/[0.08] bg-black/70 px-4 py-3 shadow-2xl shadow-black/20 backdrop-blur-xl sm:px-6">
           <div className="flex items-center justify-between">
+
             {/* Logo */}
             <a
               href="#top"
               onClick={closeMenu}
               className="group flex items-center gap-3"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-violet-400/20 bg-violet-500/10">
-                <span className="text-sm font-bold text-violet-400">MS</span>
+              {/* Profile Image */}
+              <div className="relative h-9 w-9 overflow-hidden rounded-xl border border-violet-400/20 bg-violet-500/10">
+                <img
+                  src="/image.jpg"
+                  alt="Mohd Shoaib"
+                  className="h-full w-full object-cover"
+                />
               </div>
 
               <div className="hidden sm:block">
                 <p className="text-sm font-semibold tracking-wide text-white">
                   Mohd Shoaib
                 </p>
+
                 <p className="text-[10px] uppercase tracking-[0.18em] text-zinc-500">
                   Full Stack Engineer
                 </p>

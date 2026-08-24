@@ -81,7 +81,7 @@ const [resumeOpen, setResumeOpen] = useState(false);
               , a  React.js Developer and Full Stack Engineer with
               <span className="font-medium text-violet-300">
                 {" "}
-                8.8+ years
+                8.8 years
               </span>{" "}
               of experience building enterprise-grade web applications.
             </p>
