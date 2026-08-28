@@ -1,14 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Menu, X, ExternalLink, FileText } from "lucide-react";
 
 const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -23,21 +24,12 @@ export default function Navbar() {
           <div className="flex items-center justify-between">
 
             {/* Logo */}
-            <a
-              href="#top"
+            <Link
+              href="/"
               onClick={closeMenu}
               className="group flex items-center gap-3"
             >
-              {/* Profile Image */}
-              <div className="relative h-9 w-9 overflow-hidden rounded-xl border border-violet-400/20 bg-violet-500/10">
-                <img
-                  src="/image.jpg"
-                  alt="Mohd Shoaib"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-
-              <div className="hidden sm:block">
+              <div>
                 <p className="text-sm font-semibold tracking-wide text-white">
                   Mohd Shoaib
                 </p>
@@ -46,19 +38,35 @@ export default function Navbar() {
                   Full Stack Engineer
                 </p>
               </div>
-            </a>
+            </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden items-center gap-1 lg:flex">
-              {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="rounded-lg px-3 py-2 text-sm text-zinc-400 transition hover:bg-white/[0.05] hover:text-white"
-                >
-                  {item.label}
-                </a>
-              ))}
+              {navItems.map((item) => {
+                const isRoute = item.href.startsWith("/");
+
+                if (isRoute) {
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="rounded-lg px-3 py-2 text-sm text-zinc-400 transition hover:bg-white/[0.05] hover:text-white"
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                }
+
+                return (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="rounded-lg px-3 py-2 text-sm text-zinc-400 transition hover:bg-white/[0.05] hover:text-white"
+                  >
+                    {item.label}
+                  </a>
+                );
+              })}
             </div>
 
             {/* Desktop Actions */}
@@ -99,23 +107,43 @@ export default function Navbar() {
           {isOpen && (
             <div className="border-t border-white/[0.08] pt-4 lg:hidden">
               <div className="flex flex-col gap-1">
-                {navItems.map((item) => (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    onClick={closeMenu}
-                    className="rounded-lg px-3 py-3 text-sm text-zinc-400 transition hover:bg-white/[0.05] hover:text-white"
-                  >
-                    {item.label}
-                  </a>
-                ))}
 
+                {navItems.map((item) => {
+                  const isRoute = item.href.startsWith("/");
+
+                  if (isRoute) {
+                    return (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={closeMenu}
+                        className="rounded-lg px-3 py-3 text-sm text-zinc-400 transition hover:bg-white/[0.05] hover:text-white"
+                      >
+                        {item.label}
+                      </Link>
+                    );
+                  }
+
+                  return (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      onClick={closeMenu}
+                      className="rounded-lg px-3 py-3 text-sm text-zinc-400 transition hover:bg-white/[0.05] hover:text-white"
+                    >
+                      {item.label}
+                    </a>
+                  );
+                })}
+
+                {/* Mobile Actions */}
                 <div className="mt-3 grid grid-cols-2 gap-2 border-t border-white/[0.08] pt-3">
+
                   <a
                     href="https://www.linkedin.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/[0.08] px-3 py-3 text-sm text-zinc-300"
+                    className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/[0.08] px-3 py-3 text-sm text-zinc-300 transition hover:bg-white/[0.05] hover:text-white"
                   >
                     <ExternalLink size={15} />
                     LinkedIn
@@ -125,11 +153,12 @@ export default function Navbar() {
                     href="/resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-3 py-3 text-sm font-semibold text-black"
+                    className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-3 py-3 text-sm font-semibold text-black transition hover:bg-zinc-200"
                   >
                     <FileText size={15} />
                     Resume
                   </a>
+
                 </div>
               </div>
             </div>
