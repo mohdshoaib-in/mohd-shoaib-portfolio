@@ -155,15 +155,16 @@ export default function Navbar() {
                     LinkedIn
                   </a>
 
-                  <a
-                    href="/resume.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-3 py-3 text-sm font-semibold text-black transition hover:bg-zinc-200"
-                  >
-                    <FileText size={15} />
-                    Resume
-                  </a>
+                 <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center justify-center gap-2 rounded-xl border border-violet-400/25 bg-violet-500/10 px-3 py-3 text-sm font-semibold text-violet-200 shadow-[0_0_25px_rgba(139,92,246,0.08)] transition-all duration-300 hover:border-violet-400/40 hover:bg-violet-500/15 hover:text-white hover:shadow-[0_0_30px_rgba(139,92,246,0.15)]"
+                >
+                  <FileText size={15} />
+                  Resume
+                </a>
+
 
                 </div>
               </div>
