@@ -29,6 +29,12 @@ export default function Navbar() {
               onClick={closeMenu}
               className="group flex items-center gap-3"
             >
+              <img
+                src="/image.jpg"
+                alt="Mohd Shoaib"
+                className="h-10 w-10 rounded-full object-cover border border-white/[0.08]"
+              />
+
               <div>
                 <p className="text-sm font-semibold tracking-wide text-white">
                   Mohd Shoaib
