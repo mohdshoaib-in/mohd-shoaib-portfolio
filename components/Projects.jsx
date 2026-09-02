@@ -44,7 +44,7 @@ const projects = [
       "React.js",
       "TypeScript",
       "Node.js",
-      "Express.js",
+      "Tailwind CSS",
       "Highcharts.js",
     ],
     highlights: [

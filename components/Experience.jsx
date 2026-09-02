@@ -39,7 +39,7 @@ const experiences = [
           "React",
           "TypeScript",
           "Node.js",
-          "Express.js",
+          "Tailwind CSS",
           "Highcharts.js",
         ],
       },
