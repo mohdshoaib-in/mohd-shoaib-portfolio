@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X, ExternalLink, FileText } from "lucide-react";
+import { profile } from "@/lib/profile";
 
 const navItems = [
   { label: "About", href: "/#about" },
@@ -78,7 +79,7 @@ export default function Navbar() {
             {/* Desktop Actions */}
             <div className="hidden items-center gap-2 lg:flex">
               <a
-                href="https://www.linkedin.com/"
+                href={profile.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/[0.08] px-3 py-2 text-sm text-zinc-300 transition hover:border-white/[0.15] hover:bg-white/[0.05] hover:text-white"
